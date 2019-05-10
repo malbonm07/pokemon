@@ -1,33 +1,49 @@
-<template lang="html">
+<template>
   <v-footer
     dark
     height="auto"
-    class="mt-5"
   >
     <v-card
+      class="flex"
       flat
       tile
-      class="indigo lighten-1 white--text text-xs-center"
     >
+      <v-card-title class="teal">
+        <strong class="subheading">Get connected with me on social networks!</strong>
 
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </v-card-text>
+        <v-spacer></v-spacer>
 
-      <v-divider></v-divider>
+        <v-btn class="mx-3" dark icon>
+          <a href="https://www.facebook.com/malbonm07" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </v-btn>
+        <v-btn class="mx-3" dark icon>
+          <a href="https://twitter.com/malbonm07" target="_blank"><i class='fab fa-twitter'></i></a>
+        </v-btn>
+        <v-btn class="mx-3" dark icon>
+          <a href="https://www.linkedin.com/in/malbonm07" target="_blank"><i class='fab fa-instagram'></i></a>
+        </v-btn>
+      </v-card-title>
 
-      <v-card-text class="white--text">
-        &copy;2019 — <strong>Vuetify</strong>
-      </v-card-text>
+      <v-card-actions class="grey darken-3 justify-center">
+        &copy;2019 — <strong>Malbonm07</strong>
+      </v-card-actions>
     </v-card>
   </v-footer>
 </template>
 
 <script>
 export default {
-  name: 'FooterLayout'
+  name: 'FooterLayout',
+  data: () => ({
+  })
 }
 </script>
 
-<style>
+<style scoped>
+.fab {
+  font-size: 25px;
+}
+a {
+  color: white;
+}
 </style>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container fluid>
+  <v-container fluid class="teal lighten-3">
     <HeaderLayout></HeaderLayout>
       <router-view/>
     <FooterLayout/>

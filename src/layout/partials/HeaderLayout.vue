@@ -6,12 +6,14 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat>
-          <router-link :to="{path: '/'}">Search</router-link>
+          <router-link :to="{path: '/'}" style="color: black; text-decoration: none; padding: 20px 10px 20px 10px;">Search</router-link>
         </v-btn>
         <v-btn flat>
-          <router-link :to="{path: '/list'}">List</router-link>
+          <router-link :to="{path: '/list'}" style="color: black; text-decoration: none; padding: 20px 10px 20px 10px;">List</router-link>
         </v-btn>
-        <v-btn flat>About</v-btn>
+        <v-btn flat>
+          <router-link :to="{path: '/about'}" style="color: black; text-decoration: none; padding: 20px 10px 20px 10px;">About</router-link>
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </v-container>

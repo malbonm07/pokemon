@@ -13,9 +13,9 @@
       </v-flex>
     </v-layout>
 
-    <v-container>
+    <v-container class="mb-5 viewPokeDetail">
       <v-layout v-if="this.pokemons" wrap justify-center fluid class="">
-        <v-flex xs12 sm6 md6 class="pa-2 pokeCard">
+        <v-flex xs12 sm6 md6 class="pa-2 pokeCard" v-if="pokemonObject">
           <!-- <div  min-width="240px"> -->
             <pokeDetails :pokeObject="pokemonObject">
             </pokeDetails>
@@ -23,6 +23,11 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-layout row wrap class="pa-5">
+      <v-flex xs12>
+        <h2 class="text-xs-center">FIND YOUR FAVORITE POKEMON, CLICK ON SEARCH</h2>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
@@ -39,7 +44,7 @@ export default {
   data: () => ({
     pokemonToSearch: "",
     pokemons: [],
-    pokemonObject: {}
+    pokemonObject: null
   }),
   methods: {
     getPokemon() {
@@ -55,6 +60,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.pokeCard {
+.viewPokeDetail {
+
 }
 </style>

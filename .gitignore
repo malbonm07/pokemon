@@ -1,7 +1,5 @@
 public
 babel.config.js
-package-lock.json
-package.json
 .DS_Store
 node_modules
 /dist
