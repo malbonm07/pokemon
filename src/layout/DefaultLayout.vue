@@ -1,11 +1,7 @@
 <template lang="html">
-  <v-container fluid app>
+  <v-container fluid>
     <HeaderLayout></HeaderLayout>
-      <v-container>
-        <v-layout>
-          <h1>dasdsadsa</h1>
-        </v-layout>
-      </v-container>
+      <router-view/>
     <FooterLayout/>
     <Navigation/>
   </v-container>
@@ -22,7 +18,7 @@ export default {
     HeaderLayout,
     FooterLayout,
     Navigation
-  }
+  },
 }
 </script>
 

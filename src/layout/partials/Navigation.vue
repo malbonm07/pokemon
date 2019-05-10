@@ -1,21 +1,5 @@
 <template>
-  <v-layout
-    wrap
-    style="height: 200px;"
-  >
-    <v-container>
-      <v-layout justify-center>
-        <!-- <v-btn
-          color="pink"
-          dark
-          @click.stop="drawer = !drawer"
-        >
-          Toggle
-        </v-btn> -->
-      </v-layout>
-    </v-container>
-
-    <v-navigation-drawer
+ <v-navigation-drawer
       v-model="value"
       absolute
       temporary
@@ -34,8 +18,7 @@
 
       <v-list class="pt-0" dense>
       </v-list>
-    </v-navigation-drawer>
-  </v-layout>
+  </v-navigation-drawer>
 </template>
 
 <script>
