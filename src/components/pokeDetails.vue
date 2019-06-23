@@ -24,6 +24,16 @@
       <v-slide-y-transition>
         <v-card-text v-show="show" class="orange darken-2">
           <v-layout row wrap justify-center align-center>
+            <v-flex xs12>
+              <v-progress-linear
+                :color="color"
+                height="20"
+                :value="valor"
+                style="text-align: center;"
+              >
+                Base Exp. {{this.pokeObject.base_experience}}
+              </v-progress-linear>
+            </v-flex>
             <v-flex xs4 align-self-start>
               <v-list-tile-content>
                 <v-list-tile-title class="body-2">Abilities:</v-list-tile-title>
@@ -36,7 +46,7 @@
               <v-list-tile-content>
                 <v-list-tile-title class="body-2">Stats:</v-list-tile-title>
                 <v-list-tile-sub-title v-for="stat in this.pokeObject.stats">
-                  {{stat.stat.name}}
+                  {{stat.stat.name}} <span style="font-weight: bold;">{{stat.base_stat}}</span>
                 </v-list-tile-sub-title>
               </v-list-tile-content>
             </v-flex>
@@ -65,8 +75,19 @@ export default {
   },
   data: () => ({
     show: false,
+    color1: "warning"
   }),
-  methods: {
+  computed: {
+    color() {
+      if (this.pokeObject.base_experience < 110) return 'error'
+      if (this.pokeObject.base_experience > 110 && this.pokeObject.base_experience < 190) return 'primary'
+      if (this.pokeObject.base_experience > 190) return 'success'
+    },
+    valor() {
+      if (this.pokeObject.base_experience < 110) return '35'
+      if (this.pokeObject.base_experience > 110 && this.pokeObject.base_experience < 190) return '70'
+      if (this.pokeObject.base_experience > 190) return '100'
+    }
   }
 }
 </script>

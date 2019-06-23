@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container>
+  <div>
     <v-layout v-if="this.pokemonsListPreview" wrap justify-center fluid class="">
       <v-flex xs12 sm4 md3 class="pa-2 pokeCard" v-for="(pokemon, index) in this.pokemonsListPreview" :key="index.key">
         <pokeCard :pokeObject="pokemon" :indexPokeObject="index">
@@ -15,7 +15,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-container>
+  </div>
 </template>
 
 <script>

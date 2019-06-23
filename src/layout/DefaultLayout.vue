@@ -1,10 +1,12 @@
 <template lang="html">
-  <v-container fluid class="teal lighten-3">
+  <div fluid class="teal lighten-3">
     <HeaderLayout></HeaderLayout>
-      <router-view/>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
     <FooterLayout/>
     <Navigation/>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -23,4 +25,7 @@ export default {
 </script>
 
 <style>
+.contain {
+  padding-bottom: 0px !important;
+}
 </style>

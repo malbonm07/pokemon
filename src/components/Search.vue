@@ -1,7 +1,7 @@
 <template lang="html">
-  <v-container fluid>
-    <v-layout class="teal pa-5" align-center justify-center>
-      <v-flex class="" xs12 sm10>
+  <div style="min-height: 100vh;">
+    <v-layout class="teal py-5" align-center justify-center>
+      <v-flex class="" xs10 md8>
       <v-text-field
           solo
           label="Buscar Pokemón"
@@ -13,7 +13,7 @@
       </v-flex>
     </v-layout>
 
-    <v-container class="mb-5 viewPokeDetail">
+    <div class="mb-5 mt-5 viewPokeDetail">
       <v-layout v-if="this.pokemons" wrap justify-center fluid class="">
         <v-flex xs12 sm6 md6 class="pa-2 pokeCard" v-if="pokemonObject">
           <!-- <div  min-width="240px"> -->
@@ -22,13 +22,13 @@
           <!-- </div> -->
         </v-flex>
       </v-layout>
-    </v-container>
+    </div>
     <v-layout row wrap class="pa-5">
       <v-flex xs12>
         <h2 class="text-xs-center">FIND YOUR FAVORITE POKEMON, CLICK ON SEARCH</h2>
       </v-flex>
     </v-layout>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -50,7 +50,8 @@ export default {
     getPokemon() {
       // axios.get(`https://pokeapi.co/api/v2/pokemon/${this.pokenmonToSearch}`)
       // .then(response => console.log(response))
-      getApi.search(this.pokemonToSearch)
+      let pokemonName = this.pokemonToSearch.toLowerCase()
+      getApi.search(pokemonName)
       .then(res => {
         this.pokemonObject = res.data
       })
@@ -60,7 +61,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.viewPokeDetail {
-
-}
 </style>

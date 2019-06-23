@@ -1,7 +1,5 @@
 <template>
-  <v-container fluid>
     <Search/>
-  </v-container>
 </template>
 
 <script>

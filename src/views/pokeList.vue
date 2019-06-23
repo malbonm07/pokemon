@@ -1,8 +1,6 @@
 <template lang="html">
-  <v-container>
     <ListPokemon>
     </ListPokemon>
-  </v-container>
 </template>
 
 <script>
